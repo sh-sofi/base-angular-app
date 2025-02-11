@@ -7,13 +7,15 @@ import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskFormComponent } from './tasks/task-form/task-form.component';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     TaskDetailComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

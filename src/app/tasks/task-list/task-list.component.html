@@ -1,7 +1,12 @@
 <app-task-form (onTaskAdded)="addTask($event)"></app-task-form>
 
 <ul class="task-list">
-  <li class="task-item" *ngFor="let task of tasks" (click)="selectTask(task)">
+  <li
+    appHighlight="#e5e5e5"
+    class="task-item"
+    *ngFor="let task of tasks"
+    (click)="selectTask(task)"
+  >
     {{ task.title }}
   </li>
 </ul>
