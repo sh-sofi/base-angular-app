@@ -1,0 +1,17 @@
+<!-- task-form.component.html -->
+<div class="task-form">
+  <form>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="newTask.title"
+      placeholder="Title"
+    />
+    <textarea
+      name="description"
+      [(ngModel)]="newTask.description"
+      placeholder="Description"
+    ></textarea>
+    <button (click)="addTask()">Add Task</button>
+  </form>
+</div>

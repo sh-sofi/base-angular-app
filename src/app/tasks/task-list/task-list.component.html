@@ -1,0 +1,9 @@
+<app-task-form (onTaskAdded)="addTask($event)"></app-task-form>
+
+<ul class="task-list">
+  <li class="task-item" *ngFor="let task of tasks" (click)="selectTask(task)">
+    {{ task.title }}
+  </li>
+</ul>
+
+<app-task-detail [selectedTask]="selectedTask"></app-task-detail>
