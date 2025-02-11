@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ITask, Task } from '../task.model';
+import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'app-task-form',
@@ -10,10 +11,10 @@ import { ITask, Task } from '../task.model';
 export class TaskFormComponent {
   public newTask: ITask = new Task('', '');
 
-  @Output() private onTaskAdded: EventEmitter<ITask> = new EventEmitter<ITask>();
+  constructor(private tasksService: TasksService) {}
 
   public addTask(): void {
-    this.onTaskAdded.emit(this.newTask);
+    this.tasksService.addTask(this.newTask);
 
     this.newTask = new Task('', '');
   }

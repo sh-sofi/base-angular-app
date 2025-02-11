@@ -1,10 +1,10 @@
-<app-task-form (onTaskAdded)="addTask($event)"></app-task-form>
+<app-task-form></app-task-form>
 
 <ul class="task-list">
   <li
     appHighlight="#e5e5e5"
     class="task-item"
-    *ngFor="let task of tasks"
+    *ngFor="let task of tasks$ | async"
     (click)="selectTask(task)"
   >
     {{ task.title | kebabCase }}
