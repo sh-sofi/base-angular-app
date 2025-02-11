@@ -8,6 +8,7 @@ import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskFormComponent } from './tasks/task-form/task-form.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
+import { KebabCasePipe } from './pipes/kebab-case.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     TaskListComponent,
     TaskDetailComponent,
     TaskFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    KebabCasePipe
   ],
   imports: [
     BrowserModule,
