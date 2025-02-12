@@ -1,14 +1,12 @@
-<app-task-form></app-task-form>
+<button (click)="navigateToCreate()">Create Task</button>
 
 <ul class="task-list">
   <li
     appHighlight="#e5e5e5"
     class="task-item"
     *ngFor="let task of tasks$ | async"
-    (click)="selectTask(task)"
+    (click)="navigateToTask(task.id)"
   >
     {{ task.title | kebabCase }}
   </li>
 </ul>
-
-<app-task-detail [selectedTask]="selectedTask"></app-task-detail>
