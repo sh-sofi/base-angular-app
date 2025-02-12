@@ -1,6 +1,9 @@
 {
   "name": "base-angular-app",
   "version": "0.0.0",
+  "author": "sh-sofi",
+  "license": "MIT",
+  "description": "This is a modular Angular application structured to handle task management functionality.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
