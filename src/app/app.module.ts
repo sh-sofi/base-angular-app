@@ -9,6 +9,7 @@ import { TaskFormComponent } from './tasks/task-form/task-form.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './directives/highlight.directive';
 import { KebabCasePipe } from './pipes/kebab-case.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { KebabCasePipe } from './pipes/kebab-case.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

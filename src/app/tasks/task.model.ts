@@ -1,18 +1,18 @@
 import { UUID } from "angular2-uuid";
 
 export interface ITask {
-    id: string;
+    id: number | null;
     title: string;
     description: string;
 }
 
 export class Task implements ITask {
-    id: string;
+    id: number | null;
     title: string;
     description: string;
 
     constructor(title: string, description: string) {
-        this.id = UUID.UUID();
+        this.id = null;
         this.title = title;
         this.description = description;
     }
